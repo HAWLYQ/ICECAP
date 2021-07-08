@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cdf4445a-8636-4dbd-9522-024697f5da53" name="202.112.113.77" url="http://202.112.113.77">
+        <fileTransfer host="202.112.113.77" port="2226" privateKey="E:\files_anwenhu\Experiment\key_taurus_csz_2226" rootFolder="/data6/haw" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="2226" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
