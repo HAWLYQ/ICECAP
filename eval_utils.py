@@ -26,7 +26,7 @@ def language_eval(data_set, preds, model_id, split):
     import sys
     if data_set == 'breakingnews':
         if split == 'val':
-            annFile = './breaingnews_data/breakingnews_val.json'
+            annFile = './breakingnews_data/breakingnews_val.json'
             print('annFile', annFile)
             with open(annFile, 'rb') as f:
                 dataset = json.load(f)
