@@ -1,4 +1,4 @@
-#ICECAP: Information Concentrated Entity-aware Image Captioning (ACM MM2020)
+# ICECAP: Information Concentrated Entity-aware Image Captioning (ACM MM2020)
 
 By Anwen Hu, Shizhe Chen, Qin Jin
 
@@ -10,8 +10,8 @@ By Anwen Hu, Shizhe Chen, Qin Jin
 (put directory pycocoevalcap and pycocotools under ICECAP)
 
 ## Feature Preparation
-###1. prepare article input and ground truth
-download json files of [BreakingNews]() and [GoodNews]() and put them in directory ICECAP/$DATASET_data, which should contain follwing json files:
+### 1. prepare article input and ground truth
+download json files of [BreakingNews](https://drive.google.com/file/d/11CDFOBSbPlad4W5zSfk_5S1HrhR7y8BT/view?usp=sharing) and [GoodNews](https://drive.google.com/file/d/101b6PJWICryP-m6tM7abiYgdQrczyy8s/view?usp=sharing) and put them in directory ICECAP/$DATASET_data, which should contain follwing json files:
 * $DATASET_$SPLIT.json: ground-truth caption ($SPLIT in [ttv, test,val], where 'ttv' means train+test+val)
 * $DATASET_article_icecap.json: processed articles for ICECAP
 * $DATASET_df.json: df file of each dataset
@@ -29,14 +29,14 @@ This code will produce following files:
 * $DATASET_retr10_words300_serial_ids.h5: serial number of named entities in sentences
 
 
-###2. prepare initialized word embeddings
+### 2. prepare initialized word embeddings
 download [glove.42B.300d](https://github.com/stanfordnlp/GloVe), and put it in directory ICECAP/data
 > python prepro_embedding.py --dataset $DATASET
 
 This code will produce the following file:
 * $DATASET_vocab_emb.py: initialized embedding matrix
 
-###3. prepare sentence-level features
+### 3. prepare sentence-level features
 
 > python prepro_articles_wavg.py
 
@@ -47,7 +47,7 @@ This code will produce the following file:
 This code will produce the following file :
 * $DATASET_articles_full_TBB.h5: sentence-level features (proposed in [GoodNews](https://openaccess.thecvf.com/content_CVPR_2019/papers/Biten_Good_News_Everyone_Context_Driven_Entity-Aware_Captioning_for_News_Images_CVPR_2019_paper.pdf))
 
-###4. prepare image input
+### 4. prepare image input
 download raw images of [BreakingNews](http://www.iri.upc.edu/groups/perception/#BreakingNews) and [GoodNews](https://github.com/furkanbiten/GoodNews)
 > cd ../prepocess
 
@@ -58,7 +58,7 @@ download raw images of [BreakingNews](http://www.iri.upc.edu/groups/perception/#
 This code will produce the following file:
 * $DATASET_image.h5: resized image input
 
-download [ResNet152]() to extract image features during training or inference
+download [ResNet152](https://drive.google.com/file/d/18fhtLcK1cFxX7RExZeIrPT7xc9BSpnH2/view?usp=sharing) to extract image features during training or inference
 
 
 ## Train
